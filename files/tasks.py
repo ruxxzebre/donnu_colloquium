@@ -405,7 +405,7 @@ def main(func):
                 break
         print(r)
 
-    def t57():
+        def t57():
         names = map(str.strip, """Johnathan Hardy
         Audrey Hopkins
         Minnie Johnson
@@ -418,10 +418,25 @@ def main(func):
         Rene Abbott""".split('\n'))
         names = list(names)
         pay = [random.randint(5700, 36666) for i in range(10)]
-        avg_pay = []
-        print(f'Зарплата найменш відхиляється від середини y {avg_pay_less_dev}')
-        max_pay = []
-        print(name_pay)
+
+        for i, j in zip(names, pay):
+            print(f"{i}, salary - {j}")
+
+        avg = sum(pay)/len(pay)
+        print(f'Average salary - {avg}')
+        avg_pay = [abs(i - avg) for i in pay]
+        print(f'Less salary deviation from average value has - {names[avg_pay.index(min(avg_pay))]}')
+
+        print(f'2 most payed employees is - ', end="")
+        print(names[pay.index(max(pay))], end=" and ")
+        pay.remove(max(pay))
+        print(names[pay.index(max(pay))], end=".\n")
+
+        min_pay = min(pay)
+        print(f'Minimum salary has - {names.pop(pay.index(min_pay))}')
+        pay.remove (min_pay)
+        print('He has been removed')
+
 
     def t58():
         A = capsule (0, values=10, text='Enter 10 values separated by gap', array_type=int)
