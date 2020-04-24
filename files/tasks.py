@@ -413,7 +413,7 @@ def main(func):
                 break
         print(r)
 
-        def t57():
+    def t57():
         names = map(str.strip, """Johnathan Hardy
         Audrey Hopkins
         Minnie Johnson
