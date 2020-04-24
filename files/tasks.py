@@ -389,6 +389,14 @@ def main(func):
             print("There is few similar elements")
         else:
             print ("There is not any similar elements")
+              
+    def t55():
+        # від 1 до 6 мешканців
+        A = capsule (1, 1, 6, 30).getArray ()
+        for i in range(len(A)//2):
+            A[i], A[len(A) - 1 - i] = A[len(A) - 1 - i], A[i]
+        print("Swapped : ",A)
+        print(sum(filter(lambda x:x > 5, A)))
 
     def t56():
         r = False
